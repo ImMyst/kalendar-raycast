@@ -1,4 +1,4 @@
-import { Form, ActionPanel, Action, showToast, getPreferenceValues, closeMainWindow, Toast } from "@raycast/api";
+import { Form, ActionPanel, Action, showToast, getPreferenceValues, closeMainWindow, popToRoot, Toast, PopToRootType } from "@raycast/api";
 import dayjs from "dayjs";
 import { createEvent } from "./create-event";
 import { TimeEnum, timeValues } from "./types";
@@ -17,7 +17,8 @@ export default function Command() {
       endDate,
     });
 
-    await closeMainWindow({ clearRootSearch: true });
+    await closeMainWindow({ clearRootSearch: true, popToRootType: PopToRootType.Immediate });
+    // await popToRoot();
     await showToast({ title: `Event ${values.emoji} ${values.name} created!`, style: Toast.Style.Success });
   }
 
