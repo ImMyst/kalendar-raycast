@@ -1,4 +1,13 @@
-import { Form, ActionPanel, Action, showToast, getPreferenceValues, closeMainWindow, popToRoot, Toast, PopToRootType } from "@raycast/api";
+import {
+  Form,
+  ActionPanel,
+  Action,
+  showToast,
+  getPreferenceValues,
+  closeMainWindow,
+  Toast,
+  PopToRootType,
+} from "@raycast/api";
 import dayjs from "dayjs";
 import { createEvent } from "./create-event";
 import { TimeEnum, timeValues } from "./types";
