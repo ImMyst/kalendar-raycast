@@ -16,7 +16,7 @@ export type Values = {
   name: string;
   description: string;
   emoji: string;
-  startDate: Date;
+  startDate: Date | null;
   endDate: Date;
   time: TimeEnum;
   calendar: string;

@@ -1,13 +1,15 @@
 import { showToast, Toast } from "@raycast/api";
 import osascript from "osascript-tag";
-import { TimeEnum, Values } from "./types";
+
+import { TimeEnum } from "./types";
+import type { Values } from "./types";
 
 export const createEvent = async (item: Values) => {
   const script = `
       var app = Application.currentApplication()
       app.includeStandardAdditions = true
       var Calendar = Application("Calendar")
-      var date = new Date(${item.startDate.getTime()})
+      var date = new Date(${item.startDate?.getTime()})
       Calendar.viewCalendar({at: date})
     `;
 
@@ -16,7 +18,7 @@ export const createEvent = async (item: Values) => {
       app.includeStandardAdditions = true
       var Calendar = Application("Calendar")
 
-      var eventStart = new Date(${item.startDate.getTime()})
+      var eventStart = new Date(${item.startDate?.getTime()})
       var eventEnd = new Date(${item.endDate.getTime()})
 
       var projectCalendars = Calendar.calendars.whose({name: "${item.calendar}"})
