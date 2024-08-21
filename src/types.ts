@@ -2,7 +2,9 @@ export enum TimeEnum {
   TenMinutes = "10",
   FifteenMinutes = "15",
   ThirtyMinutes = "30",
+  FourtyFiveMinutes = "45",
   OneHour = "60",
+  TwoHours = "180",
   FullDay = "1440",
 }
 
@@ -22,23 +24,31 @@ export type Values = {
 
 export const timeValues = [
   {
-    time: "10",
+    time: TimeEnum.TenMinutes,
     text: "10min",
   },
   {
-    time: "15",
+    time: TimeEnum.FifteenMinutes,
     text: "15min",
   },
   {
-    time: "30",
+    time: TimeEnum.ThirtyMinutes,
     text: "30min",
   },
   {
-    time: "60",
+    time: TimeEnum.FourtyFiveMinutes,
+    text: "45min",
+  },
+  {
+    time: TimeEnum.OneHour,
     text: "1h",
   },
   {
-    time: "1440",
+    time: TimeEnum.TwoHours,
+    text: "2h",
+  },
+  {
+    time: TimeEnum.FullDay,
     text: "Journée",
   },
 ] as const;

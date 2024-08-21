@@ -15,7 +15,7 @@ export const createEvent = async (item: Values) => {
       var app = Application.currentApplication()
       app.includeStandardAdditions = true
       var Calendar = Application("Calendar")
-      
+
       var eventStart = new Date(${item.startDate.getTime()})
       var eventEnd = new Date(${item.endDate.getTime()})
 

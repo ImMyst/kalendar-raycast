@@ -27,7 +27,6 @@ export default function Command() {
     });
 
     await closeMainWindow({ clearRootSearch: true, popToRootType: PopToRootType.Immediate });
-    // await popToRoot();
     await showToast({ title: `Event ${values.emoji} ${values.name} created!`, style: Toast.Style.Success });
   }
 
